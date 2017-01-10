@@ -13,16 +13,6 @@ public class User {
 	public String login;
 	public String mot_de_passe;
 	
-	public User() {
-		
-	}
-	public User(String nom, String prenom, String login, String mot_de_passe) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.login = login;
-		this.mot_de_passe = mot_de_passe;
-	}
 	public String getNom() {
 		return nom;
 	}
