@@ -3,6 +3,8 @@
  */
 package entities;
 
+import java.util.ArrayList;
+
 /**
  * @author Axel
  *
@@ -12,6 +14,10 @@ public class User {
 	public String prenom;
 	public String login;
 	public String mot_de_passe;
+        
+        public User(){
+            ArrayList droits = new ArrayList();
+        }
 	
 	public String getNom() {
 		return nom;
