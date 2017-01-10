@@ -26,6 +26,7 @@ public class User {
 		this.login = login;
 		this.mot_de_passe = mot_de_passe;
 	}
+
 	public String getNom() {
 		return nom;
 	}
