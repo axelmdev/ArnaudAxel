@@ -1,0 +1,23 @@
+commit 126d3b136340d8ffee15153fee0be924a90d8b0b
+Author: Maurice Arnaud <arnaud.maurice.pro@gmail.com>
+Date:   Tue Jan 10 16:11:36 2017 +0100
+
+    Creation class Droits
+
+commit 38012a2194ab42e1a2923baa41d38d58d93b8725
+Author: Axel Mainguy <killerbossx@gmail.com>
+Date:   Tue Jan 10 15:51:47 2017 +0100
+
+    Modification de l'application.xml
+
+commit 1f616a29dfcc6cff146cd0f02e61e3a05770602f
+Author: Axel Mainguy <killerbossx@gmail.com>
+Date:   Tue Jan 10 15:50:51 2017 +0100
+
+    Ajout de la classe User et du .gitlog
+
+commit 5d52e99f114fd20fa235a201689604b174de0abb
+Author: Axel Mainguy <killerbossx@gmail.com>
+Date:   Tue Jan 10 15:46:54 2017 +0100
+
+    Sauvegarde des modifications
