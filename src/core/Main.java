@@ -1,9 +1,7 @@
 package core;
 
-<<<<<<< HEAD
-=======
 import entities.Droits;
->>>>>>> dev
+
 import entities.User;
 
 public class Main {
