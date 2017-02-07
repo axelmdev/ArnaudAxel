@@ -1,8 +1,11 @@
 package core;
 
-import entities.Droits;
+import java.sql.Connection;
 
+import entities.Droits;
 import entities.User;
+
+import javajackson.javajackson.json.manager.JsonManager;
 
 public class Main {
 
@@ -25,11 +28,14 @@ public class Main {
 		droits2.setSeverite("Normal");
 		droits2.setSociete("Ubisoft");
 		
-		ricky.droits.add(1,droits1);
-		ricky.droits.add(2, droits2);
+		ricky.droits.add(droits1);
+		ricky.droits.add(droits2);		
 		
-		jack.droits.add(1,droits1);
-		jack.droits.add(2, droits2);
+		JsonManager json = JsonManager.getInstance();
+		
+		json.addItem(ricky);
+		json.addItem(jack);
+		json.sendToFile();
 
 	}
 }
