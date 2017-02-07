@@ -15,6 +15,8 @@ public class User {
 	public String login;
 	public String mot_de_passe;
 	public ArrayList<Droits> droits;
+	
+	public String numero;
 
 	public User() {
 		droits = new ArrayList<Droits>();
