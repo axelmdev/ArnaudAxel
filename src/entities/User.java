@@ -20,6 +20,7 @@ public class User {
 		droits = new ArrayList<Droits>();
 	}
 
+
 	public User(String nom, String prenom, String login, String mot_de_passe) {
 		super();
 		this.nom = nom;
