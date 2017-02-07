@@ -1,0 +1,1 @@
+[{"nom":null,"prenom":null,"login":"Ricky","mot_de_passe":"tata","droits":[{"niveau":"Niveau 1","severite":"Danger","nom":"Droits N�1","societe":"Ubisoft"},{"niveau":"Niveau 2","severite":"Normal","nom":"Droits N�2","societe":"Ubisoft"}]},{"nom":null,"prenom":null,"login":"Jack","mot_de_passe":"toto","droits":[]}]
