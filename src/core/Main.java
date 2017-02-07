@@ -1,17 +1,62 @@
 package core;
 
+import java.sql.ResultSet;
+
 import entities.Droits;
 import entities.User;
+import jdbc.MySQLAccess;
 
 public class Main {
 
 	public static void main(String[] args) {
-		User jack = new User();
-		User ricky = new User();
-		jack.setLogin("Jack");
-		jack.setMot_de_passe("toto");
-		ricky.setLogin("Ricky");
-		ricky.setMot_de_passe("tata");
+		int users_id = 0;
+		// Right 1
+		try {
+			MySQLAccess.getInstance().updateQuery("INSERT INTO rights (niveau,severite,nom,societe) "
+				+ "VALUES('Niveau 1','Danger','Droit 1','Ubisoft')");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		// Right 2
+		try {
+			MySQLAccess.getInstance().updateQuery("INSERT INTO rights (niveau,severite,nom,societe) "
+				+ "VALUES('Niveau 2','Normal','Droit 2','Ubisoft')");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		// User 1
+		try {
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users (login,password,nom,prenom) "
+				+ "VALUES('Jack','toto','Jack','Lee')");
+			
+			ResultSet result_id = MySQLAccess.getInstance().resultQuery("SELECT LAST_INSERT_ID() As id FROM users");
+			while (result_id.next()) {
+				users_id = result_id.getInt("id");
+			}
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users_droits (users_id,droits_id) "
+					+ "VALUES("+ users_id +",1)");
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users_droits (users_id,droits_id) "
+					+ "VALUES("+ users_id +",2)");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		// User 2
+		try {
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users (login,password,nom,prenom) "
+				+ "VALUES('Ricky','tata','Ricky','Bobby')");
+			ResultSet result_id = MySQLAccess.getInstance().resultQuery("SELECT LAST_INSERT_ID() As id FROM users");
+			while (result_id.next()) {
+				users_id = result_id.getInt("id");
+			}
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users_droits (users_id,droits_id) "
+					+ "VALUES("+ users_id +",1)");
+			MySQLAccess.getInstance().updateQuery("INSERT INTO users_droits (users_id,droits_id) "
+					+ "VALUES("+ users_id +",2)");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		Droits droits1 = new Droits();
 		Droits droits2 = new Droits();
 		droits1.setNiveau("Niveau 1");
@@ -23,10 +68,9 @@ public class Main {
 		droits2.setSeverite("Normal");
 		droits2.setSociete("Ubisoft");
 		
-		ricky.droits.add(1,droits1);
-		ricky.droits.add(2, droits2);
 		
-		jack.droits.add(1,droits1);
-		jack.droits.add(2, droits2);
+		
+		
+		
 	}
 }
