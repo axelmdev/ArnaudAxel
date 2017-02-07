@@ -10,7 +10,7 @@ package entities;
  * @author MaolmeoX
  */
 public class Droits {
-        	public String niveau;
+    public String niveau;
 	public String severite;
 	public String nom;
 	public String societe;
