@@ -14,10 +14,11 @@ public class User {
 	public String prenom;
 	public String login;
 	public String mot_de_passe;
-        
-        public User(){
-            ArrayList droits = new ArrayList();
-        }
+	public ArrayList<Droits> droits;
+    public User(){
+       droits = new ArrayList<Droits>();
+       
+    }
         
 	public User(String nom, String prenom, String login, String mot_de_passe) {
 		super();
